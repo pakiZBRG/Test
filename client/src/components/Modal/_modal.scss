@@ -1,0 +1,67 @@
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: whitesmoke;
+    padding: 2rem;
+    width: 18rem;
+    z-index: 21;
+    & h2 {
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+    & form {
+        width: 100%;
+    }
+    .form_control {
+        display: flex;
+        flex-direction: column;
+        margin: 0.6rem 0;
+        & label {
+            font-size: 0.85rem;
+            margin-bottom: .2rem;
+        }
+        & input {
+            padding: .3rem;
+            font-size: 1rem;
+            border: 1px solid #222;
+            &:focus {
+                border-color: cornflowerblue;
+            }
+        }
+    }
+    & input[type=submit] {
+        width: 100%;
+        background: dodgerblue;
+        border: none;
+        font-size: 1rem;
+        color: whitesmoke;
+        padding: .5rem;
+        cursor: pointer;
+        margin-top: 1rem;
+        margin-bottom: .4rem;
+    }
+    &-close {
+        position: absolute;
+        top: .1rem;
+        font-size: 2rem;
+        right: .5rem;
+        cursor: pointer;
+    }
+    &-switch {
+        text-decoration: underline;
+        color: royalblue;
+        cursor: pointer;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .6);
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+}

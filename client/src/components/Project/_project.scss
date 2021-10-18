@@ -1,0 +1,43 @@
+.project {
+    width: $content-width;
+    background: rgb(3, 30, 31);
+    width: $content-width;
+    @include md-screen {
+        width: 100vw;
+    }
+    &-flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        @include md-screen {
+            flex-direction: column;
+        }
+        &__img {
+            width: 25%;
+            min-width: 16rem;
+            
+            & img {
+                display: block;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        &__content {
+            width: 50%;
+            color: whitesmoke;
+            padding: 2.5rem;
+            @include sm-screen {
+                width: 80%;
+            }
+            & h1 {
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+            & p {
+                font-size: 1rem;
+            }
+        }
+    }
+}

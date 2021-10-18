@@ -1,0 +1,55 @@
+.faq {
+    width: $content-width;
+    @include md-screen {
+        width: 100vw;
+    }
+    &-flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__img {
+            width: 25rem;
+            &  img {
+                display: block;
+                width: 100%;
+                object-fit: cover;
+            }
+            @include md-screen {
+                display: none;
+            }
+        }
+        &__content {
+            width: 50%;
+            margin: 4rem;
+            @include md-screen {
+                width: 100%;
+                margin: calc(3vw + 2em);
+            }
+            & h1 {
+                font-size: 2rem;
+            }
+            & ul {
+                list-style: none;
+                margin: 1.5rem 0;
+                & li {
+                    padding: 0.7rem;
+                    border: 1px solid #222;
+                    margin: .3rem;
+                    transition: 100ms ease-out;
+                    &:hover {
+                        background: #222;
+                        color: whitesmoke;
+                    }
+                }
+            }
+            
+        }
+        & button {
+            background: linear-gradient(dodgerblue, royalblue);
+            color: whitesmoke;
+            border: none;
+            padding: 0.5rem 2rem;
+            cursor: pointer;
+        }
+    }
+}

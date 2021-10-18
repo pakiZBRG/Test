@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import "./breakpoints";
+
+
+$content-width: calc(100vw - 236px);
+@include md-screen {
+    $content-width: 100vw;
+}
+
+body, html {
+    font-family: "Montserrat";
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+input:focus{
+    outline: none;
+}
+
+@import "../components/Modal/modal";
+
+.container {
+    display: flex;
+    overflow: hidden;
+
+    @import "../components/Nav/nav";
+
+    & .content{
+        position: relative;
+        left: 14rem;
+        @include md-screen {
+            left: 0;
+        }
+        @import "../components/Hero/hero";
+
+        @import "../components/About/about";
+
+        @import "../components/Team/team";
+
+        @import "../components/Project/project";
+
+        @import "../components/Newsletter/newsletter";
+
+        @import "../components/FAQ/faq";
+
+        @import "../components/Contact/contact";
+
+        @import "../components/Footer/footer";
+    }
+}

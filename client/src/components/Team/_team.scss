@@ -1,0 +1,39 @@
+& .team {
+    margin: 0 auto;
+    width: $content-width;
+    @include md-screen {
+        width: 100vw;
+    }
+    &-flex{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        @include md-screen{
+            flex-direction: column;
+        }
+        &__img {
+            width: 50%;
+            min-width: 25rem;
+            
+            & img {
+                display: block;
+                height: 100%;
+                width: 100%;
+                object-fit: fill;
+            }
+        }
+        &__content {
+            width: 40%;
+            margin: 2rem;
+            @include md-screen {
+                width: 80%;
+                margin: 2rem auto;
+            }
+            & h1 {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,55 @@
+.newsletter {
+    height: 35vh;
+    position: relative;
+    width: $content-width;
+    @include md-screen {
+        width: 100vw;
+    }
+    &-img {
+        height: 100%;
+        background: url("../assets/newsletter.jpg") center no-repeat fixed;
+        filter: brightness(20%);
+    }
+    &-content {
+        width: 100%;
+        color: whitesmoke;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        & h1 {
+            text-align: center;
+        }
+        &__form {
+            display: flex;
+            justify-content: center;
+            padding-top: 3rem;
+            @include sm-screen {
+                width: 80%;
+                margin: 0 auto;
+                flex-direction: column;
+            }
+            & input {
+                background: none;
+                border: none;
+                border-bottom: 1px solid whitesmoke;
+                padding: .4rem;
+                font-size: 1.1rem;
+                color: whitesmoke;
+                &::placeholder{
+                    color: whitesmoke;
+                }
+            }
+            & button {
+                background: linear-gradient(dodgerblue, royalblue);
+                color: whitesmoke;
+                border: none;
+                padding: 0.5rem 2rem;
+                cursor: pointer;
+                @include sm-screen {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}

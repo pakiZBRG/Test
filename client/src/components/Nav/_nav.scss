@@ -1,0 +1,107 @@
+& .nav {
+    width: 14rem;
+    height: 100vh;
+    background: linear-gradient(royalblue, dodgerblue);
+    z-index: 10;
+    position: fixed;
+    box-shadow: 3px 0px 10px #222;
+    @include md-screen {
+        display: none;
+    }
+    &-header{
+        font-size: 2rem;
+        color: whitesmoke;
+        margin-left: 3rem;
+        padding: 4rem 0;
+    }
+    &-links {
+        list-style: none;
+        height: 40%;
+        margin-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & a, span {
+            text-decoration: none;
+            color: whitesmoke;
+            padding: 0.8rem 0 0.8rem 2rem;
+            border-top-left-radius: 2rem;
+            border-bottom-left-radius: 2rem;
+            margin: .5rem 0;
+            cursor: pointer;
+            &:hover {
+                background: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+}
+
+.mobile-nav {
+    display: none;
+    @include md-screen {
+        display: block;
+        z-index: 10;
+        .hamburger {
+            position: fixed;
+            bottom: -3.5rem;
+            right: -3.5rem;
+            height: 8rem;
+            width: 8rem;
+            background: whitesmoke;
+            border-radius: 50%;
+            box-shadow: 0px 0px 10px 2px #222;
+            cursor: pointer;
+            transition: right 900ms ease-in;
+            & p {
+                position: absolute;
+                top: 35px;
+                left: 20px;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: .9rem;
+            }
+        }
+        &__links {
+            position: fixed;
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+            bottom: -30vh;
+            width: 100%;
+            background: whitesmoke;
+            box-shadow: 0px -10px 20px #222;
+            transition: bottom 500ms ease-in;
+            transition-delay: 300ms;
+            & .close {
+                position: absolute;
+                top: 0rem;
+                right: 1rem;
+                font-size: 2rem;
+                cursor: pointer;
+            }
+            & ul {
+                width: 90%;
+                margin: 1rem auto;
+                height: 100%;
+                display: flex;
+                list-style: none;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: wrap;
+                & a, span {
+                    padding: 0.5rem 1.2rem;
+                    margin: .3rem;
+                    color: #111;
+                    text-decoration: none;
+                    border: 1px solid transparent;
+                    transition: 300ms ease-out;
+                    &:hover {
+                        border-color: #111;
+                        border-radius: 2rem;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    
+}
